@@ -1,0 +1,119 @@
+PUT music
+{
+  "mappings": {
+    "data": { 
+      "properties": { 
+        "song_name":    { "type": "text"  }, 
+        "artist":      { "type": "text" },
+        "length":     { "type": "double"  }, 
+        "genre":  {"type":"text"}
+      }
+    }
+  }
+}
+
+get /music/_mapping
+
+post /music/data/_bulk?pretty
+{"index":{"_id":"0"}}
+{"song_name":"nulla","artist":"Liza Dunn","length":9.45,"genre":"pop"}
+{"index":{"_id":"1"}}
+{"song_name":"aute","artist":"Pruitt Decker","length":9.47,"genre":"pop"}
+{"index":{"_id":"2"}}
+{"song_name":"anim","artist":"Delia Merrill","length":3.98,"genre":"bolly"}
+{"index":{"_id":"3"}}
+{"song_name":"esse","artist":"Sylvia Goff","length":6.28,"genre":"rock"}
+{"index":{"_id":"4"}}
+{"song_name":"incididunt","artist":"Wiley Bender","length":5.51,"genre":"jazz"}
+{"index":{"_id":"5"}}
+{"song_name":"irure","artist":"Cathy Glover","length":5.68,"genre":"pop"}
+{"index":{"_id":"6"}}
+{"song_name":"quis","artist":"Montgomery Johns","length":6.89,"genre":"pop"}
+{"index":{"_id":"7"}}
+{"song_name":"aliquip","artist":"Sophie Jacobson","length":9.18,"genre":"jazz"}
+{"index":{"_id":"8"}}
+{"song_name":"non","artist":"Dotson Foster","length":5.4,"genre":"rock"}
+{"index":{"_id":"9"}}
+{"song_name":"elit","artist":"Tabitha Gilbert","length":6.91,"genre":"rock"}
+{"index":{"_id":"10"}}
+{"song_name":"laboris","artist":"Stephanie Gutierrez","length":2.09,"genre":"pop"}
+{"index":{"_id":"11"}}
+{"song_name":"irure","artist":"Jennie Sargent","length":5.65,"genre":"bolly"}
+{"index":{"_id":"12"}}
+{"song_name":"ipsum","artist":"Contreras Fuentes","length":7.45,"genre":"bolly"}
+{"index":{"_id":"13"}}
+{"song_name":"officia","artist":"Dejesus Walton","length":5.38,"genre":"rock"}
+{"index":{"_id":"14"}}
+{"song_name":"do","artist":"Monique Wise","length":8.06,"genre":"rock"}
+{"index":{"_id":"15"}}
+{"song_name":"et","artist":"Wilda Burton","length":6.88,"genre":"jazz"}
+{"index":{"_id":"16"}}
+{"song_name":"sint","artist":"Kimberly Munoz","length":5.65,"genre":"pop"}
+{"index":{"_id":"17"}}
+{"song_name":"aliqua","artist":"Snow Bryan","length":3.35,"genre":"bolly"}
+{"index":{"_id":"18"}}
+{"song_name":"est","artist":"Lowery Waller","length":8.65,"genre":"jazz"}
+{"index":{"_id":"19"}}
+{"song_name":"reprehenderit","artist":"Jones Watkins","length":8.5,"genre":"pop"}
+{"index":{"_id":"20"}}
+{"song_name":"minim","artist":"Wilkerson Luna","length":6.9,"genre":"rock"}
+{"index":{"_id":"21"}}
+{"song_name":"magna","artist":"Payne Turner","length":5.3,"genre":"bolly"}
+{"index":{"_id":"22"}}
+{"song_name":"veniam","artist":"Jaime Bennett","length":2.63,"genre":"rock"}
+{"index":{"_id":"23"}}
+{"song_name":"cillum","artist":"Bette Garza","length":7.84,"genre":"pop"}
+{"index":{"_id":"24"}}
+{"song_name":"laborum","artist":"Poole Santiago","length":4.28,"genre":"jazz"}
+{"index":{"_id":"25"}}
+{"song_name":"aute","artist":"Muriel Greene","length":8.23,"genre":"pop"}
+{"index":{"_id":"26"}}
+{"song_name":"labore","artist":"Fleming Carpenter","length":6.1,"genre":"jazz"}
+{"index":{"_id":"27"}}
+{"song_name":"cupidatat","artist":"Mara Booker","length":6.72,"genre":"bolly"}
+{"index":{"_id":"28"}}
+{"song_name":"ad","artist":"Loretta Clarke","length":3.99,"genre":"jazz"}
+{"index":{"_id":"29"}}
+{"song_name":"laborum","artist":"Clara Christensen","length":5.41,"genre":"jazz"}
+{"index":{"_id":"30"}}
+{"song_name":"adipisicing","artist":"Josie Rocha","length":3.94,"genre":"pop"}
+{"index":{"_id":"31"}}
+{"song_name":"consectetur","artist":"Paige Ballard","length":9.86,"genre":"pop"}
+{"index":{"_id":"32"}}
+{"song_name":"laborum","artist":"Leanne Hester","length":3.17,"genre":"rock"}
+{"index":{"_id":"33"}}
+{"song_name":"velit","artist":"Britt Guy","length":5.17,"genre":"rock"}
+{"index":{"_id":"34"}}
+{"song_name":"labore","artist":"Olson Morse","length":4.41,"genre":"bolly"}
+{"index":{"_id":"35"}}
+{"song_name":"aute","artist":"Lynn James","length":4.49,"genre":"rock"}
+{"index":{"_id":"36"}}
+{"song_name":"non","artist":"Cindy Herrera","length":5.34,"genre":"rock"}
+{"index":{"_id":"37"}}
+{"song_name":"deserunt","artist":"Bruce Holloway","length":2.58,"genre":"pop"}
+{"index":{"_id":"38"}}
+{"song_name":"esse","artist":"Kirsten Mooney","length":3.71,"genre":"pop"}
+{"index":{"_id":"39"}}
+{"song_name":"minim","artist":"Naomi Velez","length":9.04,"genre":"pop"}
+{"index":{"_id":"40"}}
+{"song_name":"nostrud","artist":"Rosanna Murray","length":5,"genre":"jazz"}
+{"index":{"_id":"41"}}
+{"song_name":"non","artist":"Claudia Frost","length":4.01,"genre":"rock"}
+{"index":{"_id":"42"}}
+{"song_name":"tempor","artist":"Farmer Tran","length":6.72,"genre":"pop"}
+{"index":{"_id":"43"}}
+{"song_name":"nisi","artist":"Barrett Green","length":4.5,"genre":"pop"}
+{"index":{"_id":"44"}}
+{"song_name":"id","artist":"Lopez Herring","length":2.07,"genre":"jazz"}
+{"index":{"_id":"45"}}
+{"song_name":"proident","artist":"Cervantes Ball","length":4.59,"genre":"rock"}
+{"index":{"_id":"46"}}
+{"song_name":"dolor","artist":"Gentry Callahan","length":7.86,"genre":"jazz"}
+{"index":{"_id":"47"}}
+{"song_name":"deserunt","artist":"Beth Hansen","length":9.92,"genre":"bolly"}
+{"index":{"_id":"48"}}
+{"song_name":"adipisicing","artist":"Sherman Shields","length":8.49,"genre":"rock"}
+{"index":{"_id":"49"}}
+{"song_name":"esse","artist":"Gomez Woodard","length":8.81,"genre":"pop"}
+{"index":{"_id":"50"}}
+{"song_name":"tempor","artist":"Baldwin Kline","length":6.57,"genre":"pop"}

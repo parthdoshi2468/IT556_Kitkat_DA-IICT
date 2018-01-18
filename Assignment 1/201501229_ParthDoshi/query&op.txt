@@ -1,0 +1,259 @@
+1>
+GET /_search
+{
+  "query": { 
+    "bool": { 
+      "must": [
+        { "match": { "genre":   "rock"}}
+      ],
+      "filter": [ 
+        { "range": { "length": { "lte": 5 }}} ,
+        { "range": { "length": { "gte": 3 }}} 
+      ]
+    }
+  }
+}
+
+o/p:-
+{
+  "took": 3,
+  "timed_out": false,
+  "_shards": {
+    "total": 17,
+    "successful": 17,
+    "skipped": 0,
+    "failed": 0
+  },
+  "hits": {
+    "total": 4,
+    "max_score": 1.3862944,
+    "hits": [
+      {
+        "_index": "music",
+        "_type": "data",
+        "_id": "45",
+        "_score": 1.3862944,
+        "_source": {
+          "song_name": "proident",
+          "artist": "Cervantes Ball",
+          "length": 4.59,
+          "genre": "rock"
+        }
+      },
+      {
+        "_index": "music",
+        "_type": "data",
+        "_id": "35",
+        "_score": 1.1451323,
+        "_source": {
+          "song_name": "aute",
+          "artist": "Lynn James",
+          "length": 4.49,
+          "genre": "rock"
+        }
+      },
+      {
+        "_index": "music",
+        "_type": "data",
+        "_id": "41",
+        "_score": 1.060872,
+        "_source": {
+          "song_name": "non",
+          "artist": "Claudia Frost",
+          "length": 4.01,
+          "genre": "rock"
+        }
+      },
+      {
+        "_index": "music",
+        "_type": "data",
+        "_id": "32",
+        "_score": 0.9808292,
+        "_source": {
+          "song_name": "laborum",
+          "artist": "Leanne Hester",
+          "length": 3.17,
+          "genre": "rock"
+        }
+      }
+    ]
+  }
+}
+
+2>
+{
+  "query": { "match": { "genre": "pop"} 
+}
+o/p:-
+{
+  "took": 2,
+  "timed_out": false,
+  "_shards": {
+    "total": 17,
+    "successful": 17,
+    "skipped": 0,
+    "failed": 0
+  },
+  "hits": {
+    "total": 18,
+    "max_score": 1.3121864,
+    "hits": [
+      {
+        "_index": "music",
+        "_type": "data",
+        "_id": "0",
+        "_score": 1.3121864,
+        "_source": {
+          "song_name": "nulla",
+          "artist": "Liza Dunn",
+          "length": 9.45,
+          "genre": "pop"
+        }
+      },
+      {
+        "_index": "music",
+        "_type": "data",
+        "_id": "19",
+        "_score": 1.3121864,
+        "_source": {
+          "song_name": "reprehenderit",
+          "artist": "Jones Watkins",
+          "length": 8.5,
+          "genre": "pop"
+        }
+      },
+      {
+        "_index": "music",
+        "_type": "data",
+        "_id": "25",
+        "_score": 1.3121864,
+        "_source": {
+          "song_name": "aute",
+          "artist": "Muriel Greene",
+          "length": 8.23,
+          "genre": "pop"
+        }
+      },
+      {
+        "_index": "music",
+        "_type": "data",
+        "_id": "6",
+        "_score": 1.1451323,
+        "_source": {
+          "song_name": "quis",
+          "artist": "Montgomery Johns",
+          "length": 6.89,
+          "genre": "pop"
+        }
+      },
+      {
+        "_index": "music",
+        "_type": "data",
+        "_id": "38",
+        "_score": 1.1451323,
+        "_source": {
+          "song_name": "esse",
+          "artist": "Kirsten Mooney",
+          "length": 3.71,
+          "genre": "pop"
+        }
+      },
+      {
+        "_index": "music",
+        "_type": "data",
+        "_id": "43",
+        "_score": 1.1451323,
+        "_source": {
+          "song_name": "nisi",
+          "artist": "Barrett Green",
+          "length": 4.5,
+          "genre": "pop"
+        }
+      },
+      {
+        "_index": "music",
+        "_type": "data",
+        "_id": "5",
+        "_score": 0.9808292,
+        "_source": {
+          "song_name": "irure",
+          "artist": "Cathy Glover",
+          "length": 5.68,
+          "genre": "pop"
+        }
+      },
+      {
+        "_index": "music",
+        "_type": "data",
+        "_id": "10",
+        "_score": 0.9808292,
+        "_source": {
+          "song_name": "laboris",
+          "artist": "Stephanie Gutierrez",
+          "length": 2.09,
+          "genre": "pop"
+        }
+      },
+      {
+        "_index": "music",
+        "_type": "data",
+        "_id": "30",
+        "_score": 0.9808292,
+        "_source": {
+          "song_name": "adipisicing",
+          "artist": "Josie Rocha",
+          "length": 3.94,
+          "genre": "pop"
+        }
+      },
+      {
+        "_index": "music",
+        "_type": "data",
+        "_id": "42",
+        "_score": 0.9808292,
+        "_source": {
+          "song_name": "tempor",
+          "artist": "Farmer Tran",
+          "length": 6.72,
+          "genre": "pop"
+        }
+      }
+    ]
+  }
+}
+
+3>
+get /_search  
+{
+  "query": { "match": { "artist": "Jones Watkins"} } 
+}
+
+o/p:-
+{
+  "took": 6,
+  "timed_out": false,
+  "_shards": {
+    "total": 17,
+    "successful": 17,
+    "skipped": 0,
+    "failed": 0
+  },
+  "hits": {
+    "total": 1,
+    "max_score": 4.3189683,
+    "hits": [
+      {
+        "_index": "music",
+        "_type": "data",
+        "_id": "19",
+        "_score": 4.3189683,
+        "_source": {
+          "song_name": "reprehenderit",
+          "artist": "Jones Watkins",
+          "length": 8.5,
+          "genre": "pop"
+        }
+      }
+    ]
+  }
+}
